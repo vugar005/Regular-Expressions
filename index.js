@@ -37,7 +37,7 @@ const textInput = 'Front End JS developer expert ';
 // Methods
 /** /\s/  match for empty spaces */
 
-// Section: Regular Expresson flags
+// Section 2: Regular Expresson flags
 // g global, finds all matches. Othwesie stops after first match.
 // i case insensitive. Case does not matter
 // m multi-line match. Beginning and ending characters.
@@ -50,3 +50,21 @@ const textInput = 'Front End JS developer expert ';
 // const textInput2 = 'JS JS JS';
 // const regex2 = /JS/g;
 // console.log(regex2.exec(textInput2));
+
+// Section 3. Regular Expression Metacharacters
+// ^$.*+?=!:|\/()[]{}
+
+// I) Wildcard(.) which matches any character, except newline (\n)
+// below will match beautiful and beauty
+console.log(/b.a/.test('how is that beautiful the beauty word'));
+
+console.log(/b.a/.test('beauty'));
+// II) Escpaing characters
+// Assume you have text 'this could be amazing word.'  Here we want to match d. If we use /d./ this will match both in could and in word. To avoid that we can escapte metacharacters by using \. So
+// it would be /d\./ which means escape default . behavior
+
+// Control characters
+// \t tab  Ex: match 'h t' is by /h\tt\
+// \v vertical tab
+// \n newline /h\n\t/ match 'h' follwing by newline + t
+// \r carriage return
