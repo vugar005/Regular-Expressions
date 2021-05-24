@@ -37,6 +37,8 @@ const textInput = 'Front End JS developer expert ';
 // Methods
 /** /\s/  match for empty spaces */
 
+// ---------------------------------------------
+
 // Section 2: Regular Expresson flags
 // g global, finds all matches. Othwesie stops after first match.
 // i case insensitive. Case does not matter
@@ -50,6 +52,8 @@ const textInput = 'Front End JS developer expert ';
 // const textInput2 = 'JS JS JS';
 // const regex2 = /JS/g;
 // console.log(regex2.exec(textInput2));
+
+// ---------------------------------------------
 
 // Section 3. Regular Expression Metacharacters
 // ^$.*+?=!:|\/()[]{}
@@ -68,3 +72,15 @@ console.log(/b.a/.test('beauty'));
 // \v vertical tab
 // \n newline /h\n\t/ match 'h' follwing by newline + t
 // \r carriage return
+
+// III) Character sets 
+// EX: to match both gray and grey /gr[ae]y/
+// Note: metacharacters does not as metacharacters in character set
+// Ex: [a.] the . does not mean here any but rather exactly . char
+// Exception hypen(-) such as [1-4] match all between 1 and 4
+
+// Range [1-4] , [a-e]
+// Ex: [1-4a-zA-z] match anything which is either number 1-4 or a-z
+
+// Exluding characters ^(cara symbol)
+
