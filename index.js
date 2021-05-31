@@ -62,7 +62,7 @@ const textInput = 'Front End JS developer expert ';
 // below will match beautiful and beauty
 console.log(/b.a/.test('how is that beautiful the beauty word'));
 
-console.log(/b.a/.test('beauty'));
+console.log(/b.a/.test('beauty')); 
 // II) Escpaing characters
 // Assume you have text 'this could be amazing word.'  Here we want to match d. If we use /d./ this will match both in could and in word. To avoid that we can escapte metacharacters by using \. So
 // it would be /d\./ which means escape default . behavior
@@ -84,3 +84,21 @@ console.log(/b.a/.test('beauty'));
 
 // Exluding characters ^(cara symbol)
 
+// IV) Shorthand characters sets
+// \d => [0-0]
+// \w => [a-zA-z0-9_]
+// /\s =>  match for empty spaces
+
+// V) Repetition characters
+// + => matches one or more occurences, greedy
+// ? => metches zero or one occurences
+// * => matches zero or more occurences
+// By default regex is greedy, will try to find as many match as possible.
+// To make it lazy use ?, to make it greedy use + or *
+
+// const text = `She sells seashells on a seashore. The shells she sells are seashells, I'm sure.`
+
+// VI) Specificying Repetition amount {min, max} or 
+// {min } matches min occurences
+// {min,} min or more occurences
+// \w{3, 5} match 3 or 5 letters
